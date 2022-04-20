@@ -9,6 +9,22 @@ class Addinterests extends StatefulWidget {
   State<Addinterests> createState() => _AddinterestsState();
 }
 
+List interestarr = [
+  const InterestTile(title: 'sport', emoji: '⚽'),
+  const InterestTile(title: 'finance', emoji: '💲'),
+  const InterestTile(title: 'technology', emoji: '💻'),
+  const InterestTile(title: 'politics', emoji: '🤵'),
+  const InterestTile(title: 'food', emoji: '🍔'),
+  const InterestTile(title: 'international', emoji: '🌎'),
+  const InterestTile(title: 'education', emoji: '📚'),
+  const InterestTile(title: 'business', emoji: '📈'),
+  const InterestTile(title: 'cars', emoji: '🚗'),
+  const InterestTile(title: 'health', emoji: '🩺'),
+  const InterestTile(title: 'religion', emoji: '🙏'),
+  const InterestTile(title: 'entertainment', emoji: '🍿'),
+  const InterestTile(title: 'science', emoji: '🔬'),
+];
+
 class _AddinterestsState extends State<Addinterests> {
   @override
   Widget build(BuildContext context) {
@@ -31,10 +47,9 @@ class _AddinterestsState extends State<Addinterests> {
                     "Please select 3 or more topics to personalize your feed"),
                 Expanded(
                   child: ListView.builder(
-                    itemCount: 17,
+                    itemCount: interestarr.length,
                     itemBuilder: (context, index) {
-                      return const InterestTile(
-                          title: "siddhu", emoji: "🤦‍♀️");
+                      return interestarr[index];
                     },
                   ),
                 ),

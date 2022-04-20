@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:insync/widgets/button.dart';
 import 'package:insync/widgets/interest_tile.dart';
+import 'package:insync/view/onboarding/selectinterest.dart';
 
 class ChangeInterests extends StatefulWidget {
   const ChangeInterests({Key? key}) : super(key: key);
@@ -30,10 +31,9 @@ class _ChangeInterestsState extends State<ChangeInterests> {
                     "Please select 3 or more topics to personalize your feed"),
                 Expanded(
                   child: ListView.builder(
-                    itemCount: 17,
+                    itemCount: interestarr.length,
                     itemBuilder: (context, index) {
-                      return const InterestTile(
-                          title: "siddhu", emoji: "🤦‍♀️");
+                      return interestarr[index];
                     },
                   ),
                 ),
